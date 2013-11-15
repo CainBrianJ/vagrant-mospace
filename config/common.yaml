@@ -1,7 +1,7 @@
 ---
 
-git_repo          : 'git@github.com:DSpace/DSpace.git'
-git_branch        : 'master'
+git_repo          : 'git@github.com:umlso/MOspace.git'
+git_branch        : 'mospace_iteration3'
 mvn_params        : '-Denv=vagrant'
 
 ant_installer_dir : '/home/vagrant/dspace-src/dspace/target/dspace-4.0-SNAPSHOT-build'
