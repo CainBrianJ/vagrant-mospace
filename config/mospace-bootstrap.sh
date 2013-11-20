@@ -41,11 +41,11 @@ git remote add mospace-upstream git@github.com:umlso/MOspace.git
 # enable fetching of pull requests from upstream (this is a little edgy, but I like it)
 git config --add remote.mospace-upstream.fetch +refs/pull/*/head:refs/remotes/mospace-upstream/pr/*
 
-
-
 # add the official dspace upstream remote
 git remote add dspace-upstream git@github.com:DSpace/DSpace.git
 
 # enable fetching of pull requests from upstream (this is a little edgy, but I like it)
 git config --add remote.dspace-upstream.fetch +refs/pull/*/head:refs/remotes/dspace-upstream/pr/*
 
+echo "setting up BASH inputrc file"
+cp /vagrant/config/dotfiles/inputrc /home/vagrant/.inputrc
