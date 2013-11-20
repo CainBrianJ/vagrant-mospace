@@ -30,7 +30,7 @@ java = "7"
 # (Additional options are in the :virtualbox provider settings below.)
 #--------------------------
 # Name of the VM created in VirtualBox (Also the name of the subfolder in ~/VirtualBox VMs/ where this VM is normally kept)
-vb_name = "dspace-dev"
+vb_name = "mospace-dev"
 
 # How much memory to provide to VirtualBox (in MB)
 # Provide 2GB of memory by default
@@ -64,10 +64,10 @@ Vagrant.configure("2") do |config|
     config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
     # Hostname for virtual machine
-    config.vm.hostname = "dspace.vagrant.dev"
+    config.vm.hostname = "mospace.vagrant.dev"
 
     # configure a private network and set this guest's IP to 192.168.50.2
-    config.vm.network "private_network", ip: "192.168.50.2"
+    config.vm.network "private_network", ip: "192.168.50.20"
 
     # BEGIN Landrush configuration ###########################################
 

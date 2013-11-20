@@ -114,6 +114,17 @@ define dspace::install ($owner,
 
 ->
 
+   # ensure submodules are initialized and updated
+   exec { "initialize git submodules in ${src_dir}":
+     command   => "git submodule init && git submodule update",
+     cwd       => "${src_dir}", # Run command from this directory
+     user      => $owner,
+     logoutput => true,	# Send stdout to puppet log file (if any)
+   }
+
+
+->
+
    # Build DSpace installer.
    # (NOTE: by default, $mvn_params='-Denv=vagrant', which tells Maven to use the vagrant.properties file created above)
    exec { "Build DSpace installer in ${src_dir}":

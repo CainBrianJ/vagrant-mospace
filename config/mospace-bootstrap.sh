@@ -49,7 +49,3 @@ git remote add dspace-upstream git@github.com:DSpace/DSpace.git
 # enable fetching of pull requests from upstream (this is a little edgy, but I like it)
 git config --add remote.dspace-upstream.fetch +refs/pull/*/head:refs/remotes/dspace-upstream/pr/*
 
-# now be sure the submodules are OK
-cd $DSPACESRC
-git submodule init
-git submodule update

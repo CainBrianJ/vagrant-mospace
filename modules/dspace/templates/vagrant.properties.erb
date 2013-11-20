@@ -1,3 +1,5 @@
+# TODO: assetstoredir needs to be in here
+
 # DSpace build.properties
 # This file should be customised to suit your build environment.
 # Note that not all configuration is handled here, only the most common properties that tend to differ between build environments. 
@@ -20,7 +22,10 @@ dspace.hostname = localhost
 dspace.baseUrl = http://localhost:8080
 
 # Name of the site
-dspace.name = DSpace Master on Vagrant
+dspace.name = MOspace on Vagrant
+
+# just use the traditional assetstore location for now
+assetstore.dir = /home/vagrant/dspace/assetstore
 
 # Solr server
 solr.server=http://localhost:8080/solr
@@ -141,3 +146,9 @@ http.proxy.host =
 
 # port number of proxy server
 http.proxy.port =
+
+###########################
+# DEBUG LOGLEVEL SETTINGS #
+###########################
+a1.not-dspace-loglevel = INFO
+a1.dspace-loglevel = DEBUG
