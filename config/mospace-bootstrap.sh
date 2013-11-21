@@ -29,10 +29,6 @@ sudo -i -u vagrant git config --global core.autocrlf input
 # and I don't need merge backups, really, I don't
 sudo -i -u vagrant git config --global --bool merge.keepbackups false
 
-# use the simple push, which means you have to be explicit about the branch you're pushing, which is a good thing, stop with all the smarts
-sudo -i -u vagrant git config --global push.default simple
-
-
 echo "and now setting up our preferences for working copy... adding an upstream remote, PR refs..." 
 
 # add the mospace upstream remote
@@ -49,3 +45,6 @@ git config --add remote.dspace-upstream.fetch +refs/pull/*/head:refs/remotes/dsp
 
 echo "setting up BASH inputrc file"
 cp /vagrant/config/dotfiles/inputrc /home/vagrant/.inputrc
+
+echo "installing git-smart"
+sudo gem install git-smart

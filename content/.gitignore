@@ -1,0 +1,9 @@
+# ignore anything in this folder
+
+*
+
+# except the README file :-)
+!README
+
+# and, erm, this file
+!.gitignore
