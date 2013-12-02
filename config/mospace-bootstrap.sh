@@ -43,8 +43,18 @@ git remote add dspace-upstream git@github.com:DSpace/DSpace.git
 # enable fetching of pull requests from upstream (this is a little edgy, but I like it)
 git config --add remote.dspace-upstream.fetch +refs/pull/*/head:refs/remotes/dspace-upstream/pr/*
 
+# BASH inputrc customization 
 echo "setting up BASH inputrc file"
-cp /vagrant/config/dotfiles/inputrc /home/vagrant/.inputrc
+sudo -i -u vagrant cp /vagrant/config/dotfiles/inputrc /home/vagrant/.inputrc
 
+# Vim customization
+echo "setting up .vimrc file"
+sudo -i -u vagrant cp /vagrant/config/dotfiles/vimrc /home/vagrant/.vimrc
+echo "copying .vim settings folder"
+sudo -i -u vagrant cp -r /vagrant/config/dotfiles/vim /home/vagrant/.vim
+echo "creating .vimbackups folder"
+sudo -i -u vagrant mkdir /home/vagrant/.vimbackups
+
+# Git-smart is super helpful, especially for git newbies, and is worth installing just for smart-log
 echo "installing git-smart"
-sudo gem install git-smart
+sudo /opt/vagrant_ruby/bin/gem install git-smart
