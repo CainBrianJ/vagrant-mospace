@@ -31,6 +31,10 @@ export MAVEN_HOME="/usr/share/maven"
 # This ensures that you can simply run 'mvn package' from the command-line and Maven will default to using 'vagrant.properties'.
 export MAVEN_OPTS="-Denv=vagrant"
 
+# set JAVA_OPTS to increase the resources available to dspace command-line
+# scripts
+export JAVA_OPTS='-Xmx512M -Xms512M -XX:MaxPermSize=128M -XX:PermSize=32M -XX:+UseParallelGC'
+
 # change the prompt to include the git branch name, which is insanely helpful
 # Also change the prompt to include flags to indicate dirty state (*), stash state ($),
 # and indicate the presence of untracked files (%)
